@@ -15,7 +15,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React PLOP
+          Learn React PLOP mais marche euh
         </a>
       </header>
     </div>
