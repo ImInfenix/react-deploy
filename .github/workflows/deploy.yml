@@ -16,10 +16,9 @@ jobs:
 
       - run: npm ci
 
-      - name: Identify to git
-        run: git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
+      - name: Publish github pages
+        run: |
+          git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/USER_OR_ORG/REPO.git
+          npx gh-pages -d build -u "github-actions-bot <support+actions@github.com>"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Deploy application
-        run: npm run deploy
