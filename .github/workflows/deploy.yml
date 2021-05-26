@@ -19,6 +19,10 @@ jobs:
       - name: Publish github pages
         run: |
           git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/ImInfenix/react-deploy.git
+          git config user.email ${MAIL}
+          git config user.name ${NAME}
           npm run deploy
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          MAIL: ${{ secrets.MAIL }}
+          NAME: ${{ secrets.NAME }}
