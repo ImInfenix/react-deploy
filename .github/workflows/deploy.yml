@@ -16,9 +16,10 @@ jobs:
 
       - run: npm ci
 
-      - name: Deploy application
-        run:
-          git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
-          npm run deploy
+      - name: Identify to git
+        run: git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Deploy application
+        run: npm run deploy
