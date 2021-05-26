@@ -5,12 +5,18 @@ function App() {
   return (
     <div className="App">
       <Router>
-        <Navigation />
-        <Switch>
-          <Route path="/" exact component={() => <Home />} />
-          <Route path="/about" exact component={() => <About />} />
-          <Route path="/contact" exact component={() => <Contact />} />
-        </Switch>
+        <header>
+          <Navigation />
+        </header>
+        <body>
+          <div class="flex-wrapper">
+            <Switch>
+              <Route path="/" exact component={() => <Home />} />
+              <Route path="/about" exact component={() => <About />} />
+              <Route path="/contact" exact component={() => <Contact />} />
+            </Switch>
+          </div>
+        </body>
         <Footer />
       </Router>
     </div>

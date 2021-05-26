@@ -1,0 +1,164 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+
+body {
+  font-family: "Nunito";
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+li,
+a {
+  color: aliceblue;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  height: 100%;
+  background: rgb(45, 45, 45);
+  background: linear-gradient(-45deg, rgb(45, 45, 45) 0%, rgb(65, 55, 55) 100%);
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+header {
+  background-color: chocolate;
+  padding-top: 1px;
+  padding-bottom: 1px;
+  display: inline-block;
+  width: 100%;
+}
+
+header nav ul {
+  display: inline-block;
+}
+
+nav li {
+  display: table-cell;
+  vertical-align: middle;
+  font-size: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+header nav ul .logo {
+  padding-left: 0px;
+}
+
+.logo img {
+  max-width: 64px;
+  max-height: 64px;
+  border-radius: 50%;
+  vertical-align: middle;
+}
+
+header nav li a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+header ul a {
+  position: relative;
+  text-decoration: none;
+  color: aliceblue;
+  text-transform: uppercase;
+}
+
+header ul .underline a::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 3px;
+  top: 100%;
+  left: 0;
+  background: aliceblue;
+  transition: transform 0.5s;
+  transform: scaleX(0);
+  transform-origin: right;
+}
+
+header ul .underline a:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+header .current {
+  background-color: rgb(220, 120, 50);
+}
+
+header .lang {
+  padding: 5px 5px 5px 0;
+  float: right;
+  font-size: 20px;
+}
+
+header .notCurrentLang {
+  color: rgb(158, 162, 165);
+}
+
+.home {
+  text-align: center;
+  font-size: 200%;
+}
+
+footer {
+  position: relative;
+  bottom: 0;
+  padding: 10px 0;
+  width: 100%;
+  text-align: center;
+  vertical-align: middle;
+}
+
+footer nav ul {
+  display: inline;
+  padding: 0;
+}
+
+footer nav li {
+  height: 64px;
+}
+
+footer nav li img {
+  max-width: 100%;
+  max-height: 100%;
+  vertical-align: middle;
+}
+
+.flex-wrapper {
+  display: flex;
+  min-height: 75vh;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.brick {
+  margin: 25px 0;
+}
+
+h1 {
+  text-align: center;
+  font-weight: normal;
+  font-size: 300%;
+}
+
+a:any-link {
+  text-decoration: inherit;
+}
+
+.box-link {
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgb(30, 30, 30);
+  background-color: rgb(80, 80, 80);
+  padding: 0 5px;
+}
