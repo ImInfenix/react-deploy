@@ -5,7 +5,7 @@ on:
     branches: [main]
 
 jobs:
-  build:
+  deploy:
     name: Deploy 🚀
     runs-on: ubuntu-latest
 
@@ -16,5 +16,9 @@ jobs:
 
       - run: npm ci
 
-      - run: npm run deploy
-        name: Deploy application
+      - name: Deploy application
+        run:
+          git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
+          npm run deploy
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
