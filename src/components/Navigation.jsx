@@ -12,7 +12,7 @@ function Navigation(props) {
             <img src={logo} alt="Infenix Logo" />
           </Link>
         </li>
-        <li class="current">
+        <li class="underline">
           <Link to="/">Home</Link>
         </li>
         <li class="underline">

@@ -1,6 +1,7 @@
 .resume {
   display: grid;
   place-items: center;
+  min-height: 45vh;
 }
 
 .resume a {

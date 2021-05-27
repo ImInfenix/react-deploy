@@ -136,7 +136,7 @@ footer nav li img {
 
 .flex-wrapper {
   display: flex;
-  min-height: 75vh;
+  min-height: 79vh;
   flex-direction: column;
   justify-content: space-between;
 }
