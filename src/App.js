@@ -8,7 +8,7 @@ function App() {
         <header>
           <Navigation />
         </header>
-        <div class="flex-wrapper">
+        <div className="flex-wrapper">
           <Switch>
             <Route path="/" exact component={() => <Home />} />
             <Route path="/games" exact component={() => <Games />} />

@@ -7,21 +7,21 @@ function Navigation(props) {
   return (
     <nav>
       <ul>
-        <li class="logo">
+        <li className="logo">
           <Link to="/">
             <img src={logo} alt="Infenix Logo" />
           </Link>
         </li>
-        <li class="underline">
+        <li className="underline">
           <Link to="/">Home</Link>
         </li>
-        <li class="underline">
+        <li className="underline">
           <Link to="games">Games</Link>
         </li>
-        <li class="underline">
+        <li className="underline">
           <Link to="projects">Projects</Link>
         </li>
-        <li class="underline">
+        <li className="underline">
           <Link to="about">About</Link>
         </li>
       </ul>

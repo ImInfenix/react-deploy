@@ -14,7 +14,7 @@ class BoxLink extends React.Component {
 
     return (
       <li>
-        <a href={this.props.link} class="box-link">
+        <a href={this.props.link} className="box-link">
           {this.props.text}
         </a>
       </li>

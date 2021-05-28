@@ -6,12 +6,13 @@ import { projectsData } from "../data/projects";
 
 function Projects() {
   return (
-    <div class="projects">
+    <div className="projects">
       <h1>Projects</h1>
 
       {projectsData.map((data, key) => {
         return (
           <Project
+            key={key}
             name={data.name}
             year={data.year}
             description={data.description}

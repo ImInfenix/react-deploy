@@ -6,7 +6,7 @@ class Project extends React.Component {
   render() {
     return (
       <>
-        <section class="project">
+        <section className="project">
           <h2>
             {this.props.name} ({this.props.year})
           </h2>
@@ -14,9 +14,9 @@ class Project extends React.Component {
             image={this.props.splashImage}
             video={this.props.video}
           />
-          <p class="subtitle">{this.props.subtitle}</p>
-          <p class="explanation">{this.props.description}</p>
-          <div class="project-links">
+          <p className="subtitle">{this.props.subtitle}</p>
+          <p className="explanation">{this.props.description}</p>
+          <div className="project-links">
             <ul>
               <BoxLink link={this.props.codeLink} text={this.props.codeText} />
               <BoxLink link={this.props.gameLink} text={this.props.gameText} />

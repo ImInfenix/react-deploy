@@ -6,7 +6,7 @@ class ProjectPreview extends React.Component {
       return (
         <input
           type="image"
-          class="splash"
+          className="splash"
           src={this.props.image}
           alt="Project Image Preview"
         />
@@ -17,12 +17,12 @@ class ProjectPreview extends React.Component {
       return (
         <iframe
           title="video preview"
-          class="splash"
+          className="splash"
           width="560"
           height="315"
           src={this.props.video}
-          frameborder="0"
-          allowfullscreen
+          frameBorder="0"
+          allowFullScreen
         />
       );
 

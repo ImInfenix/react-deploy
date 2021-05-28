@@ -6,12 +6,13 @@ import { gamesData } from "../data/games";
 
 function Games() {
   return (
-    <div class="projects">
+    <div className="projects">
       <h1>Games</h1>
 
       {gamesData.map((data, key) => {
         return (
           <Project
+            key={key}
             name={data.name}
             year={data.year}
             description={data.description}
