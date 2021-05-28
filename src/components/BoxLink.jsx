@@ -3,6 +3,13 @@ import "./styles/project.css";
 
 class BoxLink extends React.Component {
   render() {
+    if (this.props.ciBadge)
+      return (
+        <li>
+          <img src={this.props.ciBadge} alt="CI Status" />
+        </li>
+      );
+
     if (!this.props.link || !this.props.text) return null;
 
     return (

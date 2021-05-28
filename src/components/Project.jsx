@@ -20,6 +20,7 @@ class Project extends React.Component {
             <ul>
               <BoxLink link={this.props.codeLink} text={this.props.codeText} />
               <BoxLink link={this.props.gameLink} text={this.props.gameText} />
+              <BoxLink ciBadge={this.props.ciBadge} />
             </ul>
           </div>
         </section>
