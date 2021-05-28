@@ -7,3 +7,4 @@ export { default as Projects } from "./Projects";
 export { default as Project } from "./Project";
 export { default as BoxLink } from "./BoxLink";
 export { default as ProjectPreview } from "./ProjectPreview";
+export { default as Image } from "./Image";

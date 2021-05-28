@@ -144,6 +144,10 @@ h3 {
   color: #ff9f55;
 }
 
+.timeline h3.duration {
+  padding-left: 1em;
+}
+
 .timeline p {
   color: rgb(45, 45, 45);
   font-size: 110%;

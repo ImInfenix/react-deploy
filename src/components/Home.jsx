@@ -11,7 +11,7 @@ function Home() {
         </p>
       </div>
       <div className="brick resume">
-        <a href="documents/Resume_Duncan_Sourdin_NoPersonal.pdf">
+        <a href="../documents/Resume_Duncan_Sourdin_NoPersonal.pdf">
           Download my resume
         </a>
       </div>
