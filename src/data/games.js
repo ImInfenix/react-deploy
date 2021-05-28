@@ -63,7 +63,7 @@ export const gamesData = [
   {
     name: "2045",
     year: "2020",
-    splashImage: "../images/games/2045.png",
+    splashImage: "/images/games/2045.png",
     subtitle: "Escaping the lights to get liberty back",
     description:
       'On January 2020, the second ESIR Game Jam (my engineering school) was organized. This Game Jam\'s theme was "Safe In the Dark". With my group made of four people including another programmer, we decided to make a two local player game where the first player is trying to escape from a prison. The second player helps him in achieving this goal after becoming "Shadow", an entity able to hide every source of light and deactivating it. 2045 was made in 35 hours using Unity, Photoshop and Audacity.',
@@ -88,7 +88,7 @@ export const gamesData = [
   {
     name: "Snake",
     year: "2019",
-    splashImage: "../images/games/Snake.png",
+    splashImage: "/images/games/Snake.png",
     subtitle: "An original production",
     description:
       'This is my own version of the famous game "Snake" and also my first Unity game outside of tutorials. It taught me a lot about the way I had to use Unity, what the engine was able to do, and why I had to use one.',

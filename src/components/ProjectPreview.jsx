@@ -1,10 +1,11 @@
 import React from "react";
+import Image from "./Image";
 
 class ProjectPreview extends React.Component {
   render() {
     if (this.props.image) {
       return (
-        <input
+        <Image
           type="image"
           className="splash"
           src={this.props.image}

@@ -11,7 +11,12 @@ function Home() {
         </p>
       </div>
       <div className="brick resume">
-        <a href="../documents/Resume_Duncan_Sourdin_NoPersonal.pdf">
+        <a
+          href={
+            process.env.PUBLIC_URL +
+            "/documents/Resume_Duncan_Sourdin_NoPersonal.pdf"
+          }
+        >
           Download my resume
         </a>
       </div>

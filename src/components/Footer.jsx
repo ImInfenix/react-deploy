@@ -1,8 +1,8 @@
 import React from "react";
 
-import githubMark from "../images/logos/GitHub-Mark-Light-64px.png";
-import itch from "../images/logos/itchio-textless-white.svg";
-import linkedin from "../images/logos/In-White-48.png";
+// import githubMark from "../images/logos/GitHub-Mark-Light-64px.png";
+// import itch from "../images/logos/itchio-textless-white.svg";
+// import linkedin from "../images/logos/In-White-48.png";
 
 function Footer() {
   return (
@@ -11,12 +11,24 @@ function Footer() {
         <ul>
           <li>
             <a href="https://github.com/ImInfenix" rel="noreferrer">
-              <img src={githubMark} alt="Github Mark" />
+              <img
+                src={
+                  process.env.PUBLIC_URL +
+                  "/images/logos/GitHub-Mark-Light-64px.png"
+                }
+                alt="Github Mark"
+              />
             </a>
           </li>
           <li>
             <a href="https://infenix.itch.io/" rel="noreferrer">
-              <img src={itch} alt="Itch Mark" />
+              <img
+                src={
+                  process.env.PUBLIC_URL +
+                  "/images/logos/itchio-textless-white.svg"
+                }
+                alt="Itch Mark"
+              />
             </a>
           </li>
           <li>
@@ -24,7 +36,10 @@ function Footer() {
               href="https://www.linkedin.com/in/duncan-sourdin/"
               rel="noreferrer"
             >
-              <img src={linkedin} alt="LinkedIn Mark" />
+              <img
+                src={process.env.PUBLIC_URL + "/images/logos/In-White-48.png"}
+                alt="LinkedIn Mark"
+              />
             </a>
           </li>
         </ul>
