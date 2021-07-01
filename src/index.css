@@ -24,7 +24,6 @@ body {
 
 html {
   height: 100%;
-  background: rgb(45, 45, 45);
   background: linear-gradient(-45deg, rgb(45, 45, 45) 0%, rgb(65, 55, 55) 100%);
   background-attachment: fixed;
   background-size: cover;
