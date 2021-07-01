@@ -1,33 +1,40 @@
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
+import LanguageDetector from "i18next-browser-languagedetector";
+import XHR from "i18next-http-backend";
 
-// the translations
-// (tip move them in a JSON file and import them,
-// or even better, manage them via a UI: https://react.i18next.com/guides/multiple-translation-files#manage-your-translations-with-a-management-gui)
-const resources = {
-  en: {
-    translation: {
-      home_hello: "Hi ! I'm Duncan.",
-    },
-  },
-  fr: {
-    translation: {
-      home_hello: "Bonjour ! Je suis Duncan.",
-    },
-  },
+const options = {
+  order: ["querystring", "navigator"],
+  lookupQuerystring: "lng",
 };
 
 i18n
-  .use(initReactI18next) // passes i18n down to react-i18next
+  .use(XHR)
+  .use(LanguageDetector)
+  .use(initReactI18next)
   .init({
-    resources,
-    lng: "en", // language to use, more information here: https://www.i18next.com/overview/configuration-options#languages-namespaces-resources
-    // you can use the i18n.changeLanguage function to change the language manually: https://www.i18next.com/overview/api#changelanguage
-    fallbackLng: ["en", "fr"],
+    detection: options,
+    resources: {
+      en: {
+        translation: {
+          home_hello: "Hi ! I'm Duncan.",
+        },
+      },
+      fr: {
+        translation: {
+          home_hello: "Bonjour ! Je suis Duncan.",
+        },
+      },
+    },
+    // ns: ["common"],
+    // defaultNS: "common",
+    fallbackLng: "en",
+    supportedLngs: ["en", "fr"],
 
     interpolation: {
       escapeValue: false, // react already safes from xss
     },
+    debug: false,
   });
 
 export default i18n;
