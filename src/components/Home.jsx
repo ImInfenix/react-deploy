@@ -1,4 +1,5 @@
 import React from "react";
+import { Trans } from "react-i18next";
 import "./styles/resume.css";
 
 class Home extends React.Component {
@@ -6,7 +7,9 @@ class Home extends React.Component {
     return (
       <div>
         <div className="brick home">
-          <h2>Hi ! I'm Duncan.</h2>
+          <h2>
+            <Trans i18nKey="home_hello" />
+          </h2>
           <p>
             I'm a 21 years old student in image processing and game development.
           </p>

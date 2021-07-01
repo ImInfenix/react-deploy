@@ -1,5 +1,6 @@
 import React from "react";
 import { Link, withRouter } from "react-router-dom";
+import i18n from "../i18n";
 
 var currentSection = window.location.href
   .substring(window.location.href.lastIndexOf("/") + 1)
@@ -9,12 +10,14 @@ if (currentSection === "") currentSection = "home";
 
 class Navigation extends React.Component {
   setCurrentSection(value) {
-    console.log("old " + currentSection);
     currentSection = value;
-    console.log("new " + currentSection);
   }
 
   render() {
+    const changeLanguage = (newLanguage) => {
+      i18n.changeLanguage(newLanguage);
+    };
+
     return (
       <nav>
         <ul>
@@ -47,6 +50,16 @@ class Navigation extends React.Component {
             onClick={this.setCurrentSection}
           />
         </ul>
+        <div className="lang">
+          <ul>
+            <li className="underline notCurrentLang">
+              <button onClick={() => changeLanguage("fr")}>FR</button>
+            </li>
+            <li>
+              <button onClick={() => changeLanguage("en")}>EN</button>
+            </li>
+          </ul>
+        </div>
       </nav>
     );
   }
