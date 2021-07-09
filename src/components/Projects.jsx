@@ -3,12 +3,15 @@ import Project from "./Project";
 import "./styles/project.css";
 
 import { projectsData } from "../data/projects";
+import { Trans } from "react-i18next";
 
 class Projects extends React.Component {
   render() {
     return (
       <div className="projects">
-        <h1>Projects</h1>
+        <h1>
+          <Trans i18nKey="Projects" />
+        </h1>
 
         {projectsData.map((data, key) => {
           return (

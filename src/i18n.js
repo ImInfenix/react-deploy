@@ -3,6 +3,9 @@ import { initReactI18next } from "react-i18next";
 import LanguageDetector from "i18next-browser-languagedetector";
 import XHR from "i18next-http-backend";
 
+import { TRANSLATIONS_EN } from "./translations/en";
+import { TRANSLATIONS_FR } from "./translations/fr";
+
 const options = {
   order: ["querystring", "navigator"],
   lookupQuerystring: "lng",
@@ -16,23 +19,17 @@ i18n
     detection: options,
     resources: {
       en: {
-        translation: {
-          home_hello: "Hi ! I'm Duncan.",
-        },
+        translation: TRANSLATIONS_EN,
       },
       fr: {
-        translation: {
-          home_hello: "Bonjour ! Je suis Duncan.",
-        },
+        translation: TRANSLATIONS_FR,
       },
     },
-    // ns: ["common"],
-    // defaultNS: "common",
     fallbackLng: "en",
     supportedLngs: ["en", "fr"],
 
     interpolation: {
-      escapeValue: false, // react already safes from xss
+      escapeValue: false,
     },
     debug: false,
   });

@@ -3,12 +3,15 @@ import Project from "./Project";
 import "./styles/project.css";
 
 import { gamesData } from "../data/games";
+import { Trans } from "react-i18next";
 
 class Games extends React.Component {
   render() {
     return (
       <div className="projects">
-        <h1>Games</h1>
+        <h1>
+          <Trans i18nKey="Games" />
+        </h1>
 
         {gamesData.map((data, key) => {
           return (

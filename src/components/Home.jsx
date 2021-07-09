@@ -1,7 +1,7 @@
 import React from "react";
-// import { Trans } from "react-i18next";
-import i18next from "i18next";
+import { Trans } from "react-i18next";
 import "./styles/resume.css";
+import i18n from "../i18n";
 
 class Home extends React.Component {
   render() {
@@ -9,21 +9,22 @@ class Home extends React.Component {
       <div>
         <div className="brick home">
           <h2>
-            {/* <Trans i18nKey="home_hello" /> */}
-            {i18next.t("home_hello")}
+            <Trans i18nKey="home_hello" />
           </h2>
           <p>
-            I'm a 21 years old student in image processing and game development.
+            <Trans i18nKey="home_short_presentation" />
           </p>
         </div>
         <div className="brick resume">
           <a
             href={
               process.env.PUBLIC_URL +
-              "/documents/Resume_Duncan_Sourdin_NoPersonal.pdf"
+              (i18n.language === "fr"
+                ? "/documents/CV_Duncan_Sourdin_NoPersonal.pdf"
+                : "/documents/Resume_Duncan_Sourdin_NoPersonal.pdf")
             }
           >
-            Download my resume
+            <Trans i18nKey="home_download_resume" />
           </a>
         </div>
       </div>

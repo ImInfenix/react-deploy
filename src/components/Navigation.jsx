@@ -1,6 +1,6 @@
 import React from "react";
 import { Link, withRouter } from "react-router-dom";
-import i18n from "../i18n";
+import { Trans } from "react-i18next";
 
 var currentSection = window.location.href
   .substring(window.location.href.lastIndexOf("/") + 1)
@@ -14,10 +14,6 @@ class Navigation extends React.Component {
   }
 
   render() {
-    const changeLanguage = (newLanguage) => {
-      i18n.changeLanguage(newLanguage);
-    };
-
     return (
       <nav>
         <ul>
@@ -50,16 +46,6 @@ class Navigation extends React.Component {
             onClick={this.setCurrentSection}
           />
         </ul>
-        <div className="lang">
-          <ul>
-            <li className="underline notCurrentLang">
-              <button onClick={() => changeLanguage("fr")}>FR</button>
-            </li>
-            <li>
-              <button onClick={() => changeLanguage("en")}>EN</button>
-            </li>
-          </ul>
-        </div>
       </nav>
     );
   }
@@ -73,7 +59,7 @@ class NavigationItem extends React.Component {
           to={this.props.to}
           onClick={this.props.onClick.bind(this, textLow)}
         >
-          {this.props.displayText}
+          <Trans i18nKey={this.props.displayText} />
         </Link>
       </li>
     );

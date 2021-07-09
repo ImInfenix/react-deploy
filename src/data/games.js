@@ -42,7 +42,7 @@ export const gamesData = [
       "https://img.itch.zone/aW1hZ2UvODAyNjcwLzQ0OTU2NjcucG5n/original/%2BtNzsd.png",
     subtitle: "Aliens are trying to enter dwarves' fortress",
     description:
-      "Tower Forge is a tower defense I made in collaboration withJohan Poncet. In Tower Forge, you play as dwarves defending their city against an alien invasion. The way the game differs from others tower defense games is that you can build the towers the way you want, choosing the combination of base/weapon each tower is going to use. It is up to the player to choose what element will go well with the others to make sure no alien will get through his defenses. The music is fromPierre Bédue. This game is available on the itch.io website and was developed using Unity, Photoshop, Cubase and Audacity.",
+      "Tower Forge is a tower defense I made in collaboration with Johan Poncet. In Tower Forge, you play as dwarves defending their city against an alien invasion. The way the game differs from others tower defense games is that you can build the towers the way you want, choosing the combination of base/weapon each tower is going to use. It is up to the player to choose what element will go well with the others to make sure no alien will get through his defenses. The music is fromPierre Bédue. This game is available on the itch.io website and was developed using Unity, Photoshop, Cubase and Audacity.",
     codeLink: "https://github.com/ImInfenix/TowerForge",
     codeText: "Github Repository",
     gameLink: "https://infenix.itch.io/tower-forge",

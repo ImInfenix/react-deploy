@@ -3,6 +3,7 @@ import "./styles/timeline.css";
 
 import { aboutTimelinesData } from "../data/aboutTimelinesData";
 import Timeline from "./Timeline";
+import { Trans } from "react-i18next";
 
 class About extends React.Component {
   render() {
@@ -11,7 +12,7 @@ class About extends React.Component {
         <div className="brick">
           <div className="home">
             <p>
-              You can contact me at{" "}
+              <Trans i18nKey="about_contact_at" />{" "}
               <a
                 className="box-link"
                 href="mailto:duncan.sourdin@protonmail.com?subject=Questions"
